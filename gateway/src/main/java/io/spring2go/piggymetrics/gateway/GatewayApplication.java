@@ -30,4 +30,5 @@ public class GatewayApplication {
 		restTemplate.setInterceptors(Collections.singletonList(new CatRestInterceptor()));
 		return restTemplate;
 	}
+	
 }
