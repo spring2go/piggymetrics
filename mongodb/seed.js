@@ -1,5 +1,3 @@
-use piggymetrics_account_db;
-
 print('dump start');
 
 db.accounts.update(
