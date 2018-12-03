@@ -38,7 +38,7 @@ public class CatHeaderFilter extends ZuulFilter {
 
 	@Override
 	public int filterOrder() {
-		return 0;
+		return 10;
 	}
 
 }
