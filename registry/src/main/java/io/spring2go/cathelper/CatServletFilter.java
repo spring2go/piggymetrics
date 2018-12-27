@@ -43,7 +43,7 @@ public class CatServletFilter implements Filter {
         catContext.addProperty(Cat.Context.CHILD, request.getHeader(CatHttpConstants.CAT_HTTP_HEADER_CHILD_MESSAGE_ID));
         Cat.logRemoteCallServer(catContext);
         
-        Transaction t = Cat.newTransaction(CatConstants.TYPE_SERVICE, url);
+        Transaction t = Cat.newTransaction("Service", url);
 
         try {
 

@@ -19,7 +19,7 @@ public class CatRestInterceptor implements ClientHttpRequestInterceptor {
 	public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution)
 			throws IOException {
 
-		Transaction t = Cat.newTransaction(CatConstants.TYPE_CALL, request.getURI().toString());
+		Transaction t = Cat.newTransaction(CatConstants.TYPE_REMOTE_CALL, request.getURI().toString());
 
 		try {
 			HttpHeaders headers = request.getHeaders();

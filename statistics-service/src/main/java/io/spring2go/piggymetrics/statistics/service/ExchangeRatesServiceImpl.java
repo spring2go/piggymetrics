@@ -39,7 +39,7 @@ public class ExchangeRatesServiceImpl implements ExchangeRatesService {
 
 		if (container == null || !container.getDate().equals(LocalDate.now())) {
 			
-			Transaction dbTransaction = Cat.newTransaction(CatConstants.TYPE_CALL, "get_current_rates");
+			Transaction dbTransaction = Cat.newTransaction(CatConstants.TYPE_REMOTE_CALL, "get_current_rates");
 
 			try {
 				container = client.getRates(Currency.getBase());
